@@ -1,8 +1,11 @@
-# INim: Interactive Nim Shell [![nimble](https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png)](https://github.com/yglukhov/nimble-tag) ![Nim CI](https://github.com/inim-repl/INim/workflows/Nim%20CI/badge.svg)
+# INim: interactive shell (REPL)
+![Nim CI](https://github.com/inim-repl/INim/workflows/Nim%20CI/badge.svg)
 
-`nimble install inim`
+```
+nimble install inim
+```
 
-![alt text](https://github.com/AndreiRegiani/INim/blob/master/readme.gif?raw=true)
+<img width="721" alt="Screenshot 2024-06-28 at 18 33 47" src="https://github.com/inim-repl/INim/assets/1467605/523c973b-ca2c-450e-92f2-187e2e580be0">
 
 ## Features
 
@@ -15,19 +18,19 @@
 * Preload existing source code (access to non-exported* symbols): `inim -s example.nim`
 * Optional Colorized output
 * Edit lines using $EDITOR (Ctrl-X)
-* Built in tools like ipython (cd(), ls(), pwd(), call()) enabled with --withTools
+* Built in tools like ipython (cd(), ls(), pwd(), call()) enabled with `--withTools`
 * When piped a file or some code, INim will execute that code and exit
 * Extra compiler options can be specified by adding them as arguments inim with the -d flag (ie `inim -d:ssl -d:DEBUG`)
 * Flags can turned on with `-d` by adding a `--` prefix to arguments (ie -d:--threads:on)
 
-## Config
+## Configuration
 
-Config is saved and loaded from `configDir / inim`.
+`inim --createRcFile`, for persistent configuration which is loaded from these locations:
 
-* On Windows, this is %APPDATA%\inim
-* On Linux, this is /home/<user>/.config/inim
+* Linux & macOS: `~/.config/inim`
+* Windows: `%APPDATA%\inim`
 
-Currently, the config allows you to set two options:
+The config allows you to change the defaults for:
 
 * Style
   * `prompt`: Set prompt string (default: "inim> ")
@@ -41,3 +44,5 @@ Currently, the config allows you to set two options:
 ## Contributing
 
 Pull requests and suggestions are welcome.
+
+![alt text](https://github.com/AndreiRegiani/INim/blob/master/readme.gif?raw=true)
