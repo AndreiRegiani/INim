@@ -6,3 +6,6 @@ temp.nim
 temp
 ./inim
 test/test
+bin/
+tests/test
+inim
