@@ -36,6 +36,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Configure Git safe directory
+      run: git config --global --add safe.directory /__w/INim/INim
     - name: Update nimble
       run: nimble update
     - name: Build INim

@@ -376,7 +376,7 @@ proc doRepl() =
   elif currentExpression in ["help", "help()"]:
     outputFg(fgCyan, true):
       var helpString = """
-iNim [Interactive Nim Shell] © Andrei Regiani
+INim [Interactive Nim Shell] © Andrei Regiani
 
 Available Commands:
 Quit - exit, exit(), quit, quit(), ctrl+d
