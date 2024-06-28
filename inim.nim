@@ -1,10 +1,8 @@
 # MIT License
-# Copyright (c) 2018 Andrei Regiani
+# Copyright (c) 2018-2024 Andrei Regiani
 
-import os, osproc, strformat, strutils, terminal, sequtils,
-       times, strformat, parsecfg, sugar
+import os, osproc, strformat, strutils, terminal, sequtils, times, parsecfg, sugar
 import noise
-from sequtils import filterIt
 
 # Lists available builtin commands
 var commands*: seq[string] = @[]
@@ -214,7 +212,7 @@ proc showError(output: string, reraised: bool = false) =
       # Display only the relevant lines of the stack trace
 
       if not importStatement:
-         echo lines[^3]
+        echo lines[^3]
       else:
         for line in lines[len(lines) - 5 ..< len(lines) - 1]:
           echo line
@@ -542,7 +540,7 @@ echo tmpVal
   """ % codeToRun
     )
   buffer.flushFile
-  let (echo_output, echo_status) = compileCode()
+  let (echo_output, _) = compileCode()
   echo echo_output.strip()
 
 proc main(nim = "nim", srcFile = "", showHeader = true,
