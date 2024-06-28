@@ -26,21 +26,3 @@ jobs:
       run: /home/runner/.nimble/bin/nimble build
     - name: Run tests
       run: /home/runner/.nimble/bin/nimble test -d:prompt_no_history
-
-  build-latest:
-
-    runs-on: ubuntu-latest
-
-    container:
-      image: nimlang/nim
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Configure Git safe directory
-      run: git config --global --add safe.directory /__w/INim/INim
-    - name: Update nimble
-      run: nimble update
-    - name: Build INim
-      run: nimble build
-    - name: Run tests
-      run: nimble test -d:prompt_no_history
