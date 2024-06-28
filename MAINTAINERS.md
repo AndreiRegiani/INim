@@ -1,4 +1,6 @@
-The following are the main/default maintainers:
+# Maintainers
+
+The following are the main maintainers:
 
 - Andrei Regiani ([@AndreiRegiani](https://github.com/AndreiRegiani))
 - Tris Oaten ([@0atman](https://github.com/0atman))

@@ -78,7 +78,7 @@ proc compileCode(): auto =
   # remove redundant `--hint[source]=off`
   let compileCmd = [
       app.nim, "compile", "--run", "--verbosity=0", app.flags,
-      "--hints=off", "--path=./", bufferSource
+      "--hints=off", "--path=./", "--passL:-w", bufferSource
   ].join(" ")
   result = execCmdEx(compileCmd)
 
@@ -376,7 +376,7 @@ proc doRepl() =
   elif currentExpression in ["help", "help()"]:
     outputFg(fgCyan, true):
       var helpString = """
-iNim - Interactive Nim Shell - By AndreiRegiani
+iNim [Interactive Nim Shell] © Andrei Regiani
 
 Available Commands:
 Quit - exit, exit(), quit, quit(), ctrl+d
@@ -417,7 +417,6 @@ call(cmd) - Execute command cmd in current shell
   # Don't run yet if still on indent
   if indentLevel != 0:
     # Skip indent for first line
-    let n = if currentExpression.hasIndentTrigger(): 1 else: 0
     tempIndentCode &= currentExpression & "\n"
     when promptHistory:
       # Add in indents to our history
@@ -454,7 +453,6 @@ call(cmd) - Execute command cmd in current shell
     # Don't run yet if still on indent
     if indentLevel != 0:
       # Skip indent for first line
-      let n = if currentExpression.hasIndentTrigger(): 1 else: 0
       tempIndentCode &= currentExpression & "\n"
       when promptHistory:
         # Add in indents to our history

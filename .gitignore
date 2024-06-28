@@ -8,4 +8,7 @@ temp
 test/test
 bin/
 tests/test
+tests/test_commands
+tests/test_interface
 inim
+inim.ini

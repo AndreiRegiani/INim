@@ -43,4 +43,3 @@ suite "INim Test Suite":
 
   test "Verify flags with '--' prefix work":
     check execCmdEx("""echo 'import threadpool; echo "SUCCESS"' | bin/inim --flag=--threads:on --flags=--warnings:off""").output.strip() == "SUCCESS"
-

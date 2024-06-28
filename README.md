@@ -1,10 +1,11 @@
 # INim: Interactive Nim Shell [![nimble](https://raw.githubusercontent.com/yglukhov/nimble-tag/master/nimble.png)](https://github.com/yglukhov/nimble-tag) ![Nim CI](https://github.com/inim-repl/INim/workflows/Nim%20CI/badge.svg)
 
-`$ nimble install inim`
+`nimble install inim`
 
 ![alt text](https://github.com/AndreiRegiani/INim/blob/master/readme.gif?raw=true)
 
 ## Features
+
 * Runs on Linux, macOS and Windows
 * Auto-indent (`if`, `for`, `proc`, `var`, ...)
 * Arrow keys support (command history and line navigation)
@@ -20,11 +21,14 @@
 * Flags can turned on with `-d` by adding a `--` prefix to arguments (ie -d:--threads:on)
 
 ## Config
+
 Config is saved and loaded from `configDir / inim`.
+
 * On Windows, this is %APPDATA%\inim
 * On Linux, this is /home/<user>/.config/inim
 
 Currently, the config allows you to set two options:
+
 * Style
   * `prompt`: Set prompt string (default: "inim> ")
   * `showTypes`: Show var types when printing without echo (default: true)
@@ -35,4 +39,5 @@ Currently, the config allows you to set two options:
   * `withTools`: Enable built in tools
 
 ## Contributing
+
 Pull requests and suggestions are welcome.
