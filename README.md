@@ -45,4 +45,10 @@ The config allows you to change the defaults for:
 
 Pull requests and suggestions are welcome.
 
-![alt text](https://github.com/AndreiRegiani/INim/blob/master/readme.gif?raw=true)
+<a href="https://star-history.com/#inim-repl/INim&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=inim-repl/INim&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=inim-repl/INim&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=inim-repl/INim&type=Date" />
+ </picture>
+</a>
